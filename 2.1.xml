@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videoSource id="video_source_Q1645_fw_9_10_1">
+	<property id="propGroup1Stream" name="H.264 encoding" xsi:type="PropertyStringType" value="zipStream;fpsMode;lowLimit;gopMode;maxGopLength"/>
+	<property id="propGroup2ImageSettings" name="Image Settings" xsi:type="PropertyStringType" value="imageFlip;brightness;saturation;contrast;sharpness;WDR;localContrast;whiteBalance;
+					  dayNightIrCutFilter;dayNightShiftLevel;stabilizer;stabilizerMargin"/>
+	<property id="propGroup3Exposure" name="Exposure" xsi:type="PropertyStringType" value="flickerfree;exposureZone;maxExposureTime;maxGain;exposurePriorityNormal;
+					  enableAutomaticIrisAdjustment;irisAdjustment;exposureValue;defog;defogEffect"/>
+	<property id="propGroup4OSD" name="Overlay" xsi:type="PropertyStringType" value="dateOverlay;timeOverlay;textOverlayEnabled;textOverlay;textOverlaySize;textOverlayColor;
+					  textOverlayBGColor;textOverlayPosition"/>
+
+	<property id="useIntCaptureModeValues" xsi:type="PropertyIntType" value="1"/>
+	<property id="tvStandardsMap" xsi:type="PropertyStringType" value= "pal=1#50Hz;ntsc=1#60Hz;2 MP (16:9) Forensic WDR @ 25 fps=0#50Hz;2 MP (16:9) Forensic WDR @ 30 fps=0#60Hz;2 MP (16:9) @ 100 fps=2#50Hz;2 MP (16:9) @ 120 fps=2#60Hz;"/>
+	<!--zipStream-->
+	<property id="zipStream" xsi:type="PropertyStringEnumType">
+		<value name="Off">off</value>
+		<value name="Low" default="true">10</value>
+		<value name="Middle">20</value>
+		<value name="High">30</value>
+		<value name="Supreme">40</value>
+		<value name="Extreme">50</value>
+	</property>
+	<property id="fpsMode" name="Dynamic FPS" xsi:type="PropertyBoolType" default="false"/>
+	<property id="lowLimit" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>120</max>
+			<default>0</default>
+		</value>
+	</property>
+	<property id="gopMode" name="Dynamic GOP" xsi:type="PropertyBoolType" default="false"/>
+	<property id="maxGopLength" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>1</min>
+			<max>1023</max>
+			<default>300</default>
+		</value>
+	</property>
+	<property id="imageFlip" xsi:type="PropertyIntEnumType">
+		<value default="true">0</value>
+		<value>90</value>
+		<value>180</value>
+		<value>270</value>
+		<value name="Auto">-1</value>
+	</property>
+	<property id="saturation" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="brightness" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="sharpness" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="contrast" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="WDR" xsi:type="PropertyStringEnumType">
+		<value name="WDR On">on</value>
+		<value name="WDR Off" default="true">off</value>
+	</property>
+	<property id="localContrast" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="whiteBalance" xsi:type="PropertyStringEnumType">
+		<value default="true" name="Automatic">auto</value>
+		<value name="Automatic outdoor">auto_outdoor</value>
+		<value name="Fixed Fluorescent 1">fixed_fluor1</value>
+		<value name="Fixed Fluorescent 2">fixed_fluor2</value>
+		<value name="Fixed Indoor">fixed_indoor</value>
+		<value name="Fixed Outdoor 1">fixed_outdoor1</value>
+		<value name="Fixed Outdoor 2">fixed_outdoor2</value>
+		<value name="Hold current">hold</value>
+	</property>
+	<property id="dayNightIrCutFilter" xsi:type="PropertyStringEnumType">
+		<value default="true" name="Auto">auto</value>
+		<value name="On">yes</value>
+		<value name="Off">no</value>
+	</property>
+	<property id="dayNightShiftLevel" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>100</default>
+		</value>
+	</property>
+	<property id="flickerfree" xsi:type="PropertyStringEnumType">
+		<value name="Auto" default="true">auto</value>
+		<value name="Flicker-free 50 Hz">flickerfree50</value>
+		<value name="Flicker-free 60 Hz">flickerfree60</value>
+		<value name="Flicker-reduced 50 Hz">flickerreduced50</value>
+		<value name="Flicker-reduced 60 Hz">flickerreduced60</value>
+		<value name="Hold current">hold</value>
+	</property>
+	<property id="exposureZone" xsi:type="PropertyStringEnumType">
+		<value default="true" name="Automatic">auto</value>
+		<value name="Center">center</value>
+		<value name="Spot">spot</value>
+		<value name="Upper">upper</value>
+		<value name="Lower">lower</value>
+		<value name="Left">left</value>
+		<value name="Right">right</value>
+	</property>
+	<property id="maxExposureTime" xsi:type="PropertyIntEnumType">
+		<value name="1/143000 s">7</value>
+		<value name="1/100000 s">10</value>
+		<value name="1/66500 s">15</value>
+		<value name="1/50000 s">20</value>
+		<value name="1/25000 s">40</value>
+		<value name="1/20000 s">50</value>
+		<value name="1/10000 s">100</value>
+		<value name="1/5000 s">200</value>
+		<value name="1/4000 s">250</value>
+		<value name="1/2000 s">500</value>
+		<value name="1/1000 s">1000</value>
+		<value name="1/500 s">2000</value>
+		<value name="1/250 s">4000</value>
+		<value name="1/120 s">8333</value>
+		<value name="1/100 s">10000</value>
+		<value name="1/60 s">16666</value>
+		<value name="1/50 s">20000</value>
+		<value name="1/30 s">33333</value>
+		<value name="1/25 s" default="true">40000</value>
+		<value name="1/15 s">66667</value>
+		<value name="1/12 s">83333</value>
+		<value name="1/10 s">100000</value>
+		<value name="1/6 s">166666</value>
+		<value name="1/5 s">200000</value>
+		<value name="1/4 s">250000</value>
+		<value name="1/2 s">500000</value>
+		<value name="1 s">970897</value>
+	</property>
+	<property id="maxGain" xsi:type="PropertyIntEnumType">
+		<value default="true" name="0 dB">0</value>
+		<value name="3 dB">5</value>
+		<value name="6 dB">10</value>
+		<value name="9 dB">15</value>
+		<value name="12 dB">20</value>
+		<value name="15 dB">25</value>
+		<value name="18 dB">30</value>
+		<value name="21 dB">35</value>
+		<value name="24 dB">40</value>
+		<value name="27 dB">45</value>
+		<value name="30 dB">50</value>
+		<value name="33 dB">55</value>
+		<value name="36 dB">60</value>
+		<value name="39 dB">65</value>
+		<value name="42 dB">70</value>
+		<value name="45 dB">75</value>
+		<value name="48 dB">80</value>
+		<value name="51 dB">85</value>
+		<value name="54 dB">90</value>
+		<value name="57 dB">95</value>
+		<value name="60 dB">100</value>
+	</property>
+	<property id="exposurePriorityNormal" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="enableAutomaticIrisAdjustment" xsi:type="PropertyStringEnumType">
+		<value>no</value>
+		<value default="true">yes</value>
+	</property>
+	<property id="irisAdjustment" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="exposureValue" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>50</default>
+		</value>
+	</property>
+	<property id="defog" xsi:type="PropertyStringEnumType">
+		<value default="true">off</value>
+		<value>on</value>
+	</property>
+	<property id="defogEffect" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>100</max>
+			<default>0</default>
+		</value>
+	</property>
+	<property id="stabilizer" xsi:type="PropertyStringEnumType">
+		<value default="true" name="Off">off</value>
+		<value name="On">on</value>
+	</property>
+	<property id="stabilizerMargin" xsi:type="PropertyIntRangeType">
+		<value>
+			<min>0</min>
+			<max>200</max>
+			<default>0</default>
+		</value>
+	</property>
+	<!-- OSD section -->
+	<property id="dateOverlay" xsi:type="PropertyBoolType" default="false"/>
+	<property id="timeOverlay" xsi:type="PropertyBoolType" default="false"/>
+	<property id="textOverlayEnabled" xsi:type="PropertyBoolType" default="false"/>
+	<property id="textOverlay" name="OverlayText" xsi:type="PropertyEditableStringType"/>
+	<property id="textOverlaySize" xsi:type="PropertyStringEnumType">
+		<value>small</value>
+		<value default="true">medium</value>
+		<value>large</value>
+	</property>
+	<property id="textOverlayColor" xsi:type="PropertyStringEnumType">
+		<value default="true">white</value>
+		<value>black</value>
+	</property>
+	<property id="textOverlayBGColor" xsi:type="PropertyStringEnumType">
+		<value>white</value>
+		<value default="true">black</value>
+		<value>transparent</value>
+		<value>semitransparent</value>
+	</property>
+	<property id="textOverlayPosition" xsi:type="PropertyStringEnumType">
+		<value default="true">top</value>
+		<value>bottom</value>
+	</property>
+</videoSource>
