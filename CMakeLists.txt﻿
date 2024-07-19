@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.30)
+project(uni_test)
+
+find_package(Boost 1.85.0 REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
+
+add_executable(uni_test "${CMAKE_CURRENT_SOURCE_DIR}/uni_test/uni_test.cpp")
+target_link_libraries(uni_test ${Boost_LIBRARIES})
+
+#set(BUILD_SHARED_LIBS ON)
+#set(Boost_NO_BOOST_CMAKE OFF)
+#set(Boost_USE_STATIC_RUNTIME OFF)
+
+#set(BOOST_ROOT "C:/boost_1_85_0")
+#set(BOOST_INCLUDEDIR "${BOOST_ROOT}/include")
+#set(BOOST_LIBRARYDIR "${BOOST_ROOT}/lib")
+#set(Boost_DIR "${BOOST_ROOT}/stage/lib/cmake/Boost-1.85.0")
